@@ -1,6 +1,7 @@
 body{
     background: linear-gradient(270deg, #181717, #000000);
     text-align: center;
+    padding-top:5vw;
 }
 
 #home{
@@ -87,4 +88,73 @@ p, h1, a{
 
 .menu a:active{
     transform:translateY(0);
+}
+
+.project{
+    background:linear-gradient(270deg, #807f7f, #2b2929);
+    border-radius: 15px;
+    width: 60vw;
+    transform: translateX(20vw);
+    align-self: center;
+    display:flex;
+
+    margin:3vw 0vw 3vw 0vw;
+}
+
+
+.project h1{
+    color:black;
+    font-size: 5vw;
+    margin-right: 5vw;
+}
+
+.project img{
+    width:13vw;
+    height:10vw;
+        display: block;
+    margin-right: auto; /* aligne à droite */
+    padding-left:1vw;
+    align-self: center;
+}
+
+.project:hover{
+
+    transform: translate(20vw, -5px);
+}
+
+.project:active{
+
+    transform: translate(20vw, 0px);
+}
+
+.presentation{
+    background:linear-gradient(270deg, #807f7f, #2b2929);
+    border-radius: 15px;
+    width: 60vw;
+    transform: translateX(20vw);
+    align-self: center;
+    padding: 1vw;
+
+    margin:3vw 0vw 3vw 0vw;
+}
+
+.presentation h1{
+    color:black;
+    font-size: 5vw;
+    padding: 1vw;
+    background:linear-gradient(70deg, #333131, #8d8c8c);
+    border-radius: 10px;
+    width: 50%;
+    margin: 0 auto;
+}
+.presentation h3{
+    color:black;
+    font-size: 2vw;
+
+}
+
+.presentation p{
+    color:black;
+    font-size: 3vw;
+
 }

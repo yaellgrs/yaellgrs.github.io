@@ -109,12 +109,13 @@ p, h1, a{
 }
 
 .project img{
-    width:13vw;
-    height:10vw;
-        display: block;
+    width:8vw;
+    height:8vw;
+    display: block;
     margin-right: auto; /* aligne à droite */
     padding-left:1vw;
     align-self: center;
+    object-fit: cover;
 }
 
 .project:hover{
@@ -139,10 +140,10 @@ p, h1, a{
 }
 
 .presentation h1{
-    color:black;
-    font-size: 5vw;
+    color:rgb(221, 221, 221);
+    font-size: 3vw;
     padding: 1vw;
-    background:linear-gradient(70deg, #333131, #8d8c8c);
+    background:linear-gradient(70deg, #2e2d2d75, #1d1c1c54);
     border-radius: 10px;
     width: 50%;
     margin: 0 auto;
@@ -158,3 +159,21 @@ p, h1, a{
     font-size: 3vw;
 
 }
+
+.presentation li{
+    color:black;
+    font-size: 2vw;
+    font-weight: bold;
+        text-decoration: none;
+
+}
+
+.presentation ul {
+    list-style-position: inside;
+    text-align: left;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+
+

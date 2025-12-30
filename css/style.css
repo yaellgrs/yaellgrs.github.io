@@ -135,27 +135,39 @@ p, h1, a{
     transform: translateX(20vw);
     align-self: center;
     padding: 1vw;
-
     margin:3vw 0vw 3vw 0vw;
+    color: rgba(255,255,255, 0.5);
+        box-shadow: 0px 4px 5px rgb(110, 110, 110);
 }
 
 .presentation h1{
-    color:rgb(221, 221, 221);
-    font-size: 3vw;
+    color: rgba(255,255,255, 0.65);
+    font-size: 5vw;
     padding: 1vw;
-    background:linear-gradient(70deg, #2e2d2d75, #1d1c1c54);
+    background:linear-gradient(70deg, #14133375, #2e2c3554);
     border-radius: 10px;
     width: 50%;
     margin: 0 auto;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.presentation h2{
+    color: rgba(255,255,255, 0.65);
+    font-size: 2vw;
+    padding: 1vw;
+    background:linear-gradient(70deg, #14133375, #2e2c3554);
+    border-radius: 10px;
+    width: 50%;
+    margin: 0 auto;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
 }
 .presentation h3{
-    color:black;
     font-size: 2vw;
 }
 
 .presentation p{
-    color:black;
     font-size: 3vw;
+    color: rgba(255,255,255, 0.75);
 }
 
 .presentation li{
@@ -169,7 +181,7 @@ p, h1, a{
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     transition: transform 0.2s ease;
-    color: rgba(255,255,255, 0.75);
+    color: rgba(255,255,255, 0.65);;
 
 
     text-align: center;
@@ -190,38 +202,10 @@ p, h1, a{
     list-style: none;
 }
 
-/*
-.presentation ul {
-    list-style: none;
-    padding: 0;
-    margin: 2vw auto;
+.presentation a{
+    all: unset;
+    cursor: pointer;       /* si tu veux que ce soit cliquable */
+    display: inline-block;
+    text-decoration:underline;
+    color:rgb(15, 15, 151);
 }
-
-.presentation li {
-    background: rgba(255, 255, 255, 0.1);
-    color: rgb(230, 230, 230);
-    padding: 1vw 1.5vw;
-    margin: 1vw 0;
-    border-radius: 10px;
-    font-size: 1.8vw;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    transition: transform 0.2s ease, background 0.2s ease;
-}
-
-.presentation li:hover {
-    transform: translateX(0.5vw);
-    background: rgba(255, 255, 255, 0.18);
-}
-
-.presentation li {
-    position: relative;
-    padding-left: 2.5vw;
-}
-
-.presentation li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    color: #6ee7b7;
-    font-size: 1.8vw;
-}*/

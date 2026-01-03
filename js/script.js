@@ -1,45 +1,111 @@
-
-
 const page = window.location.pathname.split("/").pop().replace(".html", "");
-console.log(page);
 
-const images = [];
+const BASE_PATH = "/img/" + page + "/image";
+const EXTENSIONS_TYPE = ["png", "mp4"]; //rajouter jpg plus tard 
+const MAX_FILES = 50; 
 
-let link = "/img/" + page + "/";
-let i = 1;
+const files = [];
+let current_index = 0;
 
-while(true){
-    let img = new Image();
-    let src = `${link}image${i}.png`
-    img.src = src;
+const container = document.getElementById("slide");
 
-    img.onload = () => {
-        images.push(src);
-        console.log("Loaded: " + src);
+function loadFiles(index = 1, ext = 0){
+    if(index >= MAX_FILES){ //fin du recursif
+        renderFiles();
+        return;
     }
 
-    img.onerror = () =>{
-        console.log("Failed: " + src);
-        i = 50;
-    }
-        i++;
-    if(i>50) break;
+    let type =  EXTENSIONS_TYPE[ext]
+    let path = BASE_PATH + index + "." + type;
+
+    fetch(path, {method: "HEAD"})
+        .then(res =>{
+            if(res.ok){
+                files.push({path, type: type});
+                loadFiles(index +1); 
+            }
+            else{
+                if (ext + 1 < EXTENSIONS_TYPE.length) {
+                    loadFiles(index, ext + 1);
+                } else {
+                    renderFiles();
+                    return;
+                    loadFiles(index + 1, 0);
+                }
+            }
+        })
+        .catch(err =>{
+            if (ext + 1 < EXTENSIONS_TYPE.length) {
+                loadFiles(index, ext + 1);
+            } else {
+                loadFiles(index + 1, 0);
+            }
+        }
+    );
+
 }
 
-console.log("nb image : " + images.length);
+function renderFiles(){
+    if(files.length <= 0) return;
+    container.innerHTML = ""; //reset
+    const file = files[current_index]
+    if(!file) return;
+
+    let elem;
+
+    if(file.type == "png"){
+        elem = document.createElement("img");
+        elem.src = file.path;
+    }
+    else if(file.type == "mp4"){
+        elem = document.createElement("video");
+        elem.src = file.path;
+        elem.autoplay = true;
+        elem.controls = true;
+        elem.autoplay = true;
+        elem.loop = true;
+        elem.muted = true;
+    }
+
+    elem.id = "slide";
+    container.appendChild(elem);
+    renderDots();
+}
+
+function renderDots(){
+    const dots_container = document.getElementById("dots");
+
+    nb = files.length;
+
+    dots_container.innerHTML = "";
+
+    dots_container.style.gridTemplateColumns = `repeat(${nb}, auto)`;
+
+    for(let i = 0; i < nb; i++){
+        let dot = document.createElement("div");
+
+        dot.classList.add("dot");  
+
+        if(i == current_index){
+            dot.style.backgroundColor = "#000000";
+        }
+        else{
+            dot.style.backgroundColor = "#212121";
+        }
+        dots_container.appendChild(dot);
+    }
+}
 
 
-let index = 1;
-const slide = document.getElementById("slide");
+loadFiles();
+renderDots();
 
-document.querySelector(".next").onclick = () =>{
-    index = (index + 1 ) % images.length;
-    slide.src = images[index];
-};
+document.querySelector(".next").addEventListener("click", () => {
+    current_index = (current_index + 1) % files.length;
+    renderFiles();
+});
 
-document.querySelector(".prev").onclick = () =>{
-    index = (index - 1 + images.length) % images.length;
-    slide.src = images[index];
-    console.log("click prev");
-};
-
+document.querySelector(".prev").addEventListener("click", () => {
+    current_index = (current_index - 1 + files.length) % files.length;
+    renderFiles();
+});

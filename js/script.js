@@ -116,21 +116,40 @@ document.querySelector(".prev").addEventListener("click", () => {
     renderFiles();
 });
 
+
+
+
+let current_elem;
+let isClick = false;
 //
 document.querySelectorAll(".presentation li").forEach(li=>{
     li.addEventListener("mouseenter", () => {
         let elem = document.getElementById(li.textContent);
+        if(current_elem && elem != current_elem) {
+            current_elem.classList.remove("description-show");
+            isClick = false;
+        }
         if(elem) elem.classList.add("description-show");
     });
+    li.addEventListener("mouseleave", () => {
+        let elem = document.getElementById(li.textContent);
+        if(elem && !isClick) elem.classList.remove("description-show");
+
+    });
+    document.addEventListener("click", () => {
+        isClick = false;
+        if(current_elem) current_elem.classList.remove("description-show");
+    });
+    li.addEventListener("click", (e) => {
+        e.stopPropagation();
+        current_elem = document.getElementById(li.textContent);
+        isClick = true;
+        if(current_elem) current_elem.classList.add("description-show");
+    });
+
 })
 
-document.querySelectorAll(".presentation li").forEach(li=>{
-    li.addEventListener("mouseleave", () => {
-        
-        let elem = document.getElementById(li.textContent);
-        if(elem) elem.classList.remove("description-show");
-    });
-})
+
 
 
 const table = document.querySelector(".table");

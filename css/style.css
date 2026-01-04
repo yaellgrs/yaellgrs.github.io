@@ -276,36 +276,59 @@ box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
 
 }
 
+/*
+.table-hide{
+    table;
+}*/
+
 .table{
     color: transparent;
     background:linear-gradient(270deg, #807f7f, #2b2929);
-    border-radius: 0px 15px 15px 0px;
+    border-radius: 15px 15px 15px 15px;
     position : fixed;
     left:0vw;
     top:10vw;
     height:31vw;
-    width: 2.5vw;;
-
+    width: 15vw;
+    transform:translateX(1.5vw);
     overflow: hidden;
     cursor: pointer;
 
     transition: width 0.5s ease, color 0.5s ease 0.3s, transform 0.5s ease;;
 }
 
-.table:hover{
-    height:31vw;
-    width: 15vw;
-    border-radius: 15px;
-    transform:translateX(1.5vw);
+.table-hide{
+    width: 1.5vw;
+    transform:translateX(0vw);
+    border-radius: 0px 15px 15px 0px;
+}
 
+.table:hover{
     box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
     -webkit-box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
     -moz-box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
 }
 
+.table-hide:hover{
+    height:31vw;
+    width: 15vw;
+    border-radius: 15px;
+    transform:translateX(1.5vw);
+}
+
 .table a{
-        color: white; 
-        text-decoration: none;;
+    color: white; 
+    text-decoration: none;;
+}
+
+.table li{
+    text-align: center;
+    opacity: 1;
+    transform: translateX(0px); 
+    transition: opacity 0.3s ease 0.3s, transform 0.3s ease 0.3s;
+    padding: 0.75em;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 .table a:hover{
@@ -322,20 +345,17 @@ box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
     align-items: center;
 }
 
-.table li{
-    text-align: center;
-    opacity: 0; /* le texte est invisible au départ */
-    transform: translateX(-20px); /* léger décalage à gauche */
-    transition: opacity 0.3s ease 0.3s, transform 0.3s ease 0.3s;
-    padding: 0.75em;
-    font-size: 1.5em;
-    font-weight: bold;
+
+.table-hide li{
+    opacity: 0;
+    transform: translateX(-20px); 
 }
 
-.table:hover li {
-    opacity: 1; /* apparaît progressivement */
-    transform: translateX(0); /* revient à sa position */
+.table-hide:hover li{
+    opacity: 1; 
+    transform: translateX(0);
 }
+
 
 #slide {
     max-width: 90%;

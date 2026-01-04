@@ -132,3 +132,20 @@ document.querySelectorAll(".presentation li").forEach(li=>{
     });
 })
 
+
+const table = document.querySelector(".table");
+
+window.addEventListener("scroll", () =>{
+    let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+
+    if(scrollTop > 50){
+        table.classList.add("table-hide");
+    }
+    else{
+        table.classList.remove("table-hide");
+    }
+
+
+});
+

@@ -96,10 +96,10 @@ function renderDots(){
     }
 }
 
-
 loadFiles();
 renderDots();
 
+//
 document.querySelector(".next").addEventListener("click", () => {
     current_index = (current_index + 1) % files.length;
     renderFiles();
@@ -109,3 +109,20 @@ document.querySelector(".prev").addEventListener("click", () => {
     current_index = (current_index - 1 + files.length) % files.length;
     renderFiles();
 });
+
+//
+document.querySelectorAll(".presentation li").forEach(li=>{
+    li.addEventListener("mouseenter", () => {
+        let elem = document.getElementById(li.textContent);
+        if(elem) elem.classList.add("description-show");
+    });
+})
+
+document.querySelectorAll(".presentation li").forEach(li=>{
+    li.addEventListener("mouseleave", () => {
+        
+        let elem = document.getElementById(li.textContent);
+        if(elem) elem.classList.remove("description-show");
+    });
+})
+

@@ -137,7 +137,6 @@ p, h1, a{
     padding: 1vw;
     margin:3vw 0vw 3vw 0vw;
     color: rgba(255,255,255, 0.5);
-
 }
 
 .presentation:hover{
@@ -165,7 +164,7 @@ box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
     border-radius: 10px;
     width: 50%;
     margin: 0 auto;
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
 }
 .presentation h3{
     font-size: 2vw;
@@ -177,18 +176,20 @@ box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
 }
 
 .presentation li{
+        display: flex;            /* active Flexbox */
+    justify-content: center;  /* centre horizontalement */
+    align-items: center;   
     color:black;
-    font-size: 2vw;
+    font-size: 1.5vw;
     font-weight: bold;
     text-decoration: none;
     background: rgba(255,255,255, 0.1);
     padding: 1vw 1.5vw;
-    margin: 1vw 0;
+
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     transition: transform 0.2s ease;
     color: rgba(255,255,255, 0.65);;
-
 
     text-align: center;
 }
@@ -201,11 +202,20 @@ box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
 
 .presentation ul {
     list-style-position: inside;
-    text-align: left;
+
     width: fit-content;
     margin: 2vw auto;
     padding: 0;
     list-style: none;
+
+    display:grid;
+    
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1vw;
+    margin-left: 10vw;  /* marge à gauche */
+    margin-right: 10vw; /* marge à droite */
+
+
 }
 
 .presentation a{
@@ -214,6 +224,54 @@ box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
     display: inline-block;
     text-decoration:underline;
     color:rgb(15, 15, 151);
+    font-size: 1.5vw;
+}
+
+.description{
+    position:fixed;
+    background: black;
+    border-radius:20px;
+    background-color: black;
+    color: white;
+    width:50%;
+    height: 30%;
+    top:70%;
+    margin-left:25%;
+
+    display: flex;
+    justify-content: center;   /* horizontal */
+    align-items: center;       /* vertical */
+
+    transform:translateY(100%);
+        backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(10px);
+
+    transition: transform 0.5s ease;
+
+    z-index: 1;
+    overflow: hidden; 
+
+    background:linear-gradient(70deg, #14133370, #2e2c3581);
+
+        background-clip: border-box;
+    -webkit-background-clip: border-box;
+
+
+    padding-left:2em;
+    padding-right:2em;
+}
+
+.description-show{
+    transform:translateY(0%);
+}
+
+.description p{
+    text-align: center;
+
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+
+
 }
 
 .table{
@@ -232,9 +290,7 @@ box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
     transition: width 0.5s ease, color 0.5s ease 0.3s, transform 0.5s ease;;
 }
 
-
 .table:hover{
-
     height:31vw;
     width: 15vw;
     border-radius: 15px;
@@ -264,8 +320,6 @@ box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
     align-items: center;
 }
 
-
-
 .table li{
     text-align: center;
     opacity: 0; /* le texte est invisible au départ */
@@ -274,18 +328,12 @@ box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
     padding: 0.75em;
     font-size: 1.5em;
     font-weight: bold;
-
-    
 }
 
 .table:hover li {
     opacity: 1; /* apparaît progressivement */
     transform: translateX(0); /* revient à sa position */
 }
-
-
-
-
 
 #slide {
     max-width: 90%;
@@ -301,7 +349,6 @@ box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
     top:50%;
     padding:1em;
     transform: translateY(-50%);
-
 }
 
 .dots

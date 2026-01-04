@@ -91,6 +91,12 @@ function renderDots(){
         }
         else{
             dot.style.backgroundColor = "#212121";
+            dot.addEventListener("click", ()=>{
+                current_index = i;
+                renderDots();
+                renderFiles();
+                console.log("click");
+            });
         }
         dots_container.appendChild(dot);
     }

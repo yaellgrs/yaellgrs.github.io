@@ -225,6 +225,8 @@ box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
     text-decoration:underline;
     color:rgb(15, 15, 151);
     font-size: 1.5vw;
+    width: 30vw;
+    margin-left:5vw;
 }
 
 .description{

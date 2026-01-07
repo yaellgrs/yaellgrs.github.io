@@ -117,8 +117,6 @@ document.querySelector(".prev").addEventListener("click", () => {
 });
 
 
-
-
 let current_elem;
 let isClick = false;
 //
@@ -150,8 +148,6 @@ document.querySelectorAll(".presentation li").forEach(li=>{
 })
 
 
-
-
 const table = document.querySelector(".table");
 
 window.addEventListener("scroll", () =>{
@@ -164,7 +160,5 @@ window.addEventListener("scroll", () =>{
     else{
         table.classList.remove("table-hide");
     }
-
-
 });
 

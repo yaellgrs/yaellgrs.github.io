@@ -37,6 +37,7 @@ body{
 
 h1{
     font-size: 7vw;
+    margin-top:0;
 }
 
 p{
@@ -117,8 +118,10 @@ p, h1, a{
 
 .project h1{
     color:black;
+    background: transparent;
     font-size: 5vw;
     margin-right: 5vw;
+    margin-top:40px;
 }
 
 .project img{
@@ -434,6 +437,23 @@ font-size: clamp(0.75em, 1.25vw, 2em);
         padding-top:25vw;
     }
 
+    h1, p{
+        margin:50px 0 75px 0;
+    }
+    h1:first-of-type{
+        margin:125px 0 75px 0;
+    }
+    p{
+        font-size: 12.5px;
+    }
+
+    .project h1{
+        margin:20px 20px 20px 20px;
+    }
+
+
+
+
 #home{
     width: 40px;
     height: 40px;
@@ -445,13 +465,13 @@ font-size: clamp(0.75em, 1.25vw, 2em);
 .menu{
     position: fixed;
     top: 20px;
-    left: 50%;
+    left: 55%;
     transform: translateX(-50%);
 
     display:grid;
     grid-template-columns: auto auto auto;
 
-    padding: 4% 2.5%;
+    padding: 3% 1.5%;
     border-radius:15px;
 
 }
@@ -463,7 +483,7 @@ font-size: clamp(0.75em, 1.25vw, 2em);
     align-items: center;
     justify-content: center;
     line-height: 0.7;
-    padding: 5px 15px;
+    padding: 5px 12.5px;
 
 
     background: transparent;

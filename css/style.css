@@ -452,47 +452,180 @@ font-size: clamp(0.75em, 1.25vw, 2em);
     }
 
 
+    #home{
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+    }
 
 
-#home{
-    width: 40px;
-    height: 40px;
-    border-radius: 5px;
+
+    .menu{
+        position: fixed;
+        top: 20px;
+        left: 55%;
+        transform: translateX(-50%);
+
+        display:grid;
+        grid-template-columns: auto auto auto;
+
+        padding: 3% 1.5%;
+        border-radius:15px;
+
+    }
+
+    .menu a{
+        display: inline-flex;
+        text-decoration:none;
+
+        align-items: center;
+        justify-content: center;
+        line-height: 0.7;
+        padding: 5px 12.5px;
+
+
+        background: transparent;
+        border: none;
+        color: white;
+        font-size: 15px;
+
+        cursor: pointer;
+
+        transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .table{
+
+        top:150px;
+        height:250px;
+        width:100px;
+    }
+
+    .table ul{
+        padding-left:5px;
+    }
+
+    
+.table-hide{
+    width: 10px;
+    transform:translateX(0vw);
+    border-radius: 0px 15px 15px 0px;
+}
+
+.presentation{
+    background:linear-gradient(270deg, #807f7f, #2b2929);
+    border-radius: 15px;
+    width: 60vw;
+    transform: translateX(30vw);
+    align-self: center;
+    padding: 1vw;
+    margin:3vw 0vw 3vw 0vw;
+    color: rgba(255,255,255, 0.5);
+
+    scroll-margin-top: 8vw;
+
+    transition: transform 1s ease;
+}
+
+.table-hide ~ .presentation{
+    transform: translateX(18vw) scaleX(1.1);
 }
 
 
 
-.menu{
-    position: fixed;
-    top: 20px;
-    left: 55%;
-    transform: translateX(-50%);
+
+    
+
+
+.presentation:hover{
+box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
+-webkit-box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
+-moz-box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
+}
+
+.presentation h1{
+    color: rgba(255,255,255, 0.65);
+    font-size: 5vw;
+    padding: 1vw;
+    background:linear-gradient(70deg, #14133375, #2e2c3554);
+    border-radius: 10px;
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.presentation h2{
+    color: rgba(255,255,255, 0.65);
+    font-size: 2vw;
+    padding: 1vw;
+    background:linear-gradient(70deg, #14133375, #2e2c3554);
+    border-radius: 10px;
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+.presentation h3{
+    font-size: 2vw;
+}
+
+.presentation p{
+    font-size: 2vw;
+    color: rgba(255,255,255, 0.75);
+}
+
+
+.presentation li{
+        display: inline-flex;            /* active Flexbox */
+    justify-content: center;  /* centre horizontalement */
+    align-items: center;   
+    font-size: 1.5vw;
+    font-weight: bold;
+    text-decoration: none;
+    background: rgba(255,255,255, 0.1);
+    padding: 1vw 1.5vw;
+
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease;
+    color: rgba(255,255,255, 0.65);;
+
+    text-align: center;
+}
+
+.presentation li:hover{
+    transform: translateX(0.5vw);
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(0,0,0, 0.5);
+}
+
+.presentation li:active{
+    transform:scale(0.9);
+}
+
+.presentation ul {
+    list-style-position: inside;
+
+    width: fit-content;
+    margin: 2vw auto;
+    padding: 0;
+    list-style: none;
 
     display:grid;
-    grid-template-columns: auto auto auto;
-
-    padding: 3% 1.5%;
-    border-radius:15px;
-
+    
+    grid-template-columns: repeat(2, auto);
+    gap: 1vw;
+    width: 70%;
 }
 
-.menu a{
-    display: inline-flex;
-    text-decoration:none;
-
-    align-items: center;
-    justify-content: center;
-    line-height: 0.7;
-    padding: 5px 12.5px;
-
-
-    background: transparent;
-    border: none;
-    color: white;
-    font-size: 15px;
-
-    cursor: pointer;
-
-    transition: background 0.2s ease, transform 0.2s ease;
+.presentation a{
+    all: unset;
+    cursor: pointer;       /* si tu veux que ce soit cliquable */
+    display: inline-block;
+    text-decoration:underline;
+    color:rgb(15, 15, 151);
+    font-size: 1.5vw;
+    width: 30vw;
+    margin-left:5vw;
 }
+
 }

@@ -1,7 +1,9 @@
+
+
 body{
     background: linear-gradient(270deg, #181717, #000000);
     text-align: center;
-    padding-top:5vw;
+    padding-top:10vw;
 }
 
 #home{
@@ -416,3 +418,15 @@ font-size: clamp(0.75em, 1.25vw, 2em);
 
 .prev{left:1%;}
 .next{right:1%;}
+
+
+@media screen and (max-width: 10px) {
+    .project {
+        width: 90vw;
+        transform: translateX(5vw);
+        background-color: red;
+    }
+    body{
+        background-color: red;
+    }
+}

@@ -105,7 +105,7 @@ p, h1, a{
 }
 
 .project{
-    background:linear-gradient(270deg, #807f7f, #2b2929);
+    background:linear-gradient(270deg, #cfcfcf6c, #42414175);
     border-radius: 15px;
     width: 60vw;
     transform: translateX(20vw);
@@ -145,7 +145,7 @@ p, h1, a{
 }
 
 .presentation{
-    background:linear-gradient(270deg, #807f7f, #2b2929);
+    background:linear-gradient(270deg, #cfcfcf6c, #42414175);
     border-radius: 15px;
     width: 60vw;
     transform: translateX(20vw);

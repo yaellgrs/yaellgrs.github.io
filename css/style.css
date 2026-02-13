@@ -248,15 +248,19 @@ box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
     width: 70%;
 }
 
-.presentation a{
+
+.presentation a {
     all: unset;
-    cursor: pointer;       /* si tu veux que ce soit cliquable */
+    cursor: pointer;
     display: inline-block;
-    text-decoration:underline;
-    color:rgb(15, 15, 151);
-    font-size: 1.5vw;
-    width: 30vw;
-    margin-left:5vw;
+
+    color: rgb(15, 15, 151);
+    text-decoration: underline;
+
+    font-size: clamp(14px, 1.2vw, 18px);
+    line-height: 1.4;
+
+    max-width: 30rem;   /* limite la largeur */
 }
 
 .description{
@@ -541,9 +545,6 @@ font-size: clamp(0.75em, 1.25vw, 2em);
 .table-hide ~ .presentation{
     transform: translateX(18vw) scaleX(1.1);
 }
-
-
-
 
     
 

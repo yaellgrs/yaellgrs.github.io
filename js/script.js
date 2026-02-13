@@ -18,7 +18,7 @@ function loadFiles(index = 1, ext = 0){
     let type =  EXTENSIONS_TYPE[ext]
     let path = BASE_PATH + index + "." + type;
 
-    fetch(path, {method: "HEAD"})
+    fetch(path, {method: "GET"})
         .then(res =>{
             if(res.ok){
                 files.push({path, type: type});

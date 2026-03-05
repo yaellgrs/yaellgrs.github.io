@@ -103,11 +103,13 @@ function renderDots(){
     }
 }
 
-loadFiles();
-renderDots();
+let slider = document.getElementById("slide");
 
-//
-document.querySelector(".next").addEventListener("click", () => {
+if(slider){
+    loadFiles();
+    renderDots();
+
+    document.querySelector(".next").addEventListener("click", () => {
     current_index = (current_index + 1) % files.length;
     renderFiles();
 });
@@ -118,11 +120,17 @@ document.querySelector(".prev").addEventListener("click", () => {
 });
 
 
+}
+
+
+//
+
 let current_elem;
 let isClick = false;
 //
-document.querySelectorAll(".presentation li").forEach(li=>{
+document.querySelectorAll(".presentation li, .profil li").forEach(li=>{
     li.addEventListener("mouseenter", () => {
+        console.log("enter");
         let elem = document.getElementById(li.textContent);
         if(current_elem && elem != current_elem) {
             current_elem.classList.remove("description-show");

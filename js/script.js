@@ -1,6 +1,7 @@
 const page = window.location.pathname.split("/").pop().replace(".html", "");
 
 const BASE_PATH = "/img/" + page + "/image";
+console.log("BASE_PATH"+  BASE_PATH);
 const EXTENSIONS_TYPE = ["png", "mp4"]; //rajouter jpg plus tard 
 const MAX_FILES = 50; 
 

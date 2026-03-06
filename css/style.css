@@ -22,9 +22,16 @@
 
 ::-webkit-scrollbar-track{
     background:var(--second-color);
+    border-radius: var(--main-border-radius);
 }
 
 ::-webkit-scrollbar-thumb{
+
+        background:var(--rappel-color-hover);
+    border-radius: var(--main-border-radius);
+}
+
+::-webkit-scrollbar-thumb:hover{
     background:var(--active-text-color);
 }
 
@@ -57,13 +64,29 @@ strong{
 }
 
 p, h1, a{
-    background:linear-gradient(270deg, #ffffff, #000000);
     -webkit-background-clip: text;
     background-clip: text;
-    color:var(--rappel-color);
+    color:var(--main-text-color);
 }
 
 
+.overlay{
+        position: fixed;
+    inset: 0;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+
+}
+
+.overlay-show{
+    opacity: 1;
+    pointer-events: all;
+}
 .calendar {
     transform-origin: center;
 }
@@ -456,6 +479,8 @@ box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
     top:70%;
     left:25%;
 
+    z-index:10;
+
     display: block;
     padding: 2em;
     text-align: center;
@@ -464,9 +489,7 @@ box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
         backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(10px);
 
-    transition: transform 0.5s ease;
-
-    z-index: 1;
+    transition: all 0.5s ease;
     overflow: hidden; 
 
     background-color:var(--rappel-color);
@@ -482,7 +505,45 @@ box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
 
 .description-show{
     transform:translateY(0%);
+
+
 }
+
+.description-show-big{
+    transform:translateY(0%);
+    width:40%;
+    height: 50%;
+    top:25%;
+    left:30%;
+}
+
+.description h1, .description a{
+    display:none;
+}
+
+.description-show-big h1, .description-show-big a{
+    display:block;
+
+    color:var(--active-text-color);
+}
+
+.description-show-big h1{
+    display:block;
+    font-size:5em;
+    margin:0px;
+}
+
+.description-show-big a{
+
+    font-size:3em;
+    margin:1em;
+
+}
+.description-show-big a:hover{
+    color:var(--rappel-color-hover);
+
+}
+
 
 .description p{
         display: block;   
@@ -491,6 +552,7 @@ box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
     word-wrap: break-word; 
     overflow-wrap: break-word;
     line-height: 1.4;
+    margin:0;
 
 }
 

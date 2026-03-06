@@ -127,6 +127,9 @@ document.querySelector(".prev").addEventListener("click", () => {
 
 let current_elem;
 let isClick = false;
+
+const overlay = document.getElementById("overlay");
+
 //
 document.querySelectorAll(".presentation li, .profil li").forEach(li=>{
     li.addEventListener("mouseenter", () => {
@@ -136,22 +139,38 @@ document.querySelectorAll(".presentation li, .profil li").forEach(li=>{
             current_elem.classList.remove("description-show");
             isClick = false;
         }
-        if(elem) elem.classList.add("description-show");
+        if(elem) {
+            console.log("add class");
+            elem.classList.add("description-show");}
     });
     li.addEventListener("mouseleave", () => {
         let elem = document.getElementById(li.textContent);
         if(elem && !isClick) elem.classList.remove("description-show");
 
     });
+    document.querySelectorAll(".description").forEach(desc => {
+    desc.addEventListener("click", (e) => {
+        e.stopPropagation();
+        });
+    });
     document.addEventListener("click", () => {
         isClick = false;
-        if(current_elem) current_elem.classList.remove("description-show");
+        if(current_elem) {
+
+            current_elem.classList.remove("description-show-big");
+            overlay.classList.remove("overlay-show");
+        }
     });
     li.addEventListener("click", (e) => {
         e.stopPropagation();
         current_elem = document.getElementById(li.textContent);
         isClick = true;
-        if(current_elem) current_elem.classList.add("description-show");
+        if(current_elem) {
+
+            current_elem.classList.remove("description-show");
+            current_elem.classList.add("description-show-big");
+            overlay.classList.add("overlay-show");
+        }
     });
 
 })

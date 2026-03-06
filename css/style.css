@@ -429,7 +429,7 @@ box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
 .presentation li:hover, .profil li:hover{
     transform: translateX(0.5vw);
     background: var(--rappel-color-hover);
-    color:white;
+    color:var(--active-text-color);
 }
 
 .presentation li:active, .profil li:active{
@@ -510,8 +510,8 @@ box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
 .description-show-big{
     transform:translateY(0%);
     width:40%;
-    height: 70%;
-    top:15%;
+    height: 90%;
+    top:1%;
     left:30%;
 }
 
@@ -551,7 +551,7 @@ box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
     word-wrap: break-word; 
     overflow-wrap: break-word;
     line-height: 1.4;
-    margin:0;
+    margin:0.25em;
 
 }
 

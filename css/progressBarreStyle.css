@@ -1,0 +1,29 @@
+.progressBarreContainer{
+
+    width:80%;
+    background-color:#ddd;
+    border-radius: var(--main-border-radius);
+    overflow: hidden;;
+    transform: translateY(50%);
+    transform: translatex(10%);
+
+}
+
+.skill{
+    width:100%;
+    height:10px; 
+    text-align:right;
+    color:white;
+    font-size: 0.5em;
+    background-color: blue;
+}
+
+.cpp{ width: 100%; }
+.csharp{ width: 90%; }
+.fr{ width: 80%;}
+.java{ width: 80%; }
+.c{ width: 70%;}
+.en{ width: 50%;}
+.javascript{ width: 40%;}
+.html{ width: 30%;}
+.python{ width: 30%;}

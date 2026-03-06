@@ -60,24 +60,29 @@ p{
 }
 
 strong{
-    color: rgb(33, 28, 51);
+    color: var(--active-text-color);
 }
 
 p, h1, a{
     -webkit-background-clip: text;
     background-clip: text;
     color:var(--main-text-color);
+    text-decoration: none;
 }
 
 
-
+.presentation:hover, .project:hover, .profil:hover{
+box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
+-webkit-box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
+-moz-box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
+}
 
 
 
 .overlay{
         position: fixed;
     inset: 0;
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(6px);
     background: rgba(0, 0, 0, 0.3);
     z-index: 2;
@@ -85,11 +90,12 @@ p, h1, a{
     pointer-events: none;
     transition: opacity 0.4s ease;
 
+
 }
 
 .overlay-show{
     opacity: 1;
-    pointer-events: all;
+    pointer-events: all;;
 }
 .calendar {
     transform-origin: center;
@@ -325,7 +331,7 @@ p, h1, a{
 }
 
 .project{
-    background:linear-gradient(270deg, #cfcfcf6c, #42414175);
+    background:var(--second-color);
     border-radius: var(--main-border-radius);
     width: 60vw;
     transform: translateX(20vw);
@@ -337,11 +343,14 @@ p, h1, a{
 
 
 .project h1{
-    color:black;
     background: transparent;
     font-size: 5vw;
     margin-right: 5vw;
     margin-top:40px;
+}
+
+.project:hover h1{
+    color:var(--active-text-color);
 }
 
 .project img{
@@ -365,7 +374,7 @@ p, h1, a{
 }
 
 .presentation{
-    background:linear-gradient(270deg, #cfcfcf6c, #42414175);
+    background:var(--second-color);
     border-radius: var(--main-border-radius);
     width: 60vw;
     transform: translateX(20vw);
@@ -377,41 +386,26 @@ p, h1, a{
     scroll-margin-top: 8vw;
 }
 
-.presentation:hover{
-box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
--webkit-box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
--moz-box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
+.presentation:hover h1, .presentation:hover h2{
+    color:var(--active-text-color);
 }
-
-.presentation h1{
+.presentation h1 .presentation h2{
     color: rgba(255,255,255, 0.65);
-    font-size: 5vw;
     padding: 1vw;
-    background:linear-gradient(70deg, #14133375, #2e2c3554);
+    background:var(--rappel-color);
     border-radius: var(--main-border-radius);
     width: 50%;
     margin: 0 auto;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
 }
-
-.presentation h2{
-    color: rgba(255,255,255, 0.65);
-    font-size: 2vw;
-    padding: 1vw;
-    background:linear-gradient(70deg, #14133375, #2e2c3554);
-    border-radius:  var(--main-border-radius);
-    width: 50%;
-    margin: 0 auto;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+.presentation h1{
+    font-size: 5vw;
 }
-.presentation h3{
+
+.presentation h3, .presentation h2, .presentation p{
     font-size: 2vw;
 }
 
-.presentation p{
-    font-size: 2vw;
-    color: rgba(255,255,255, 0.75);
-}
 
 
 .presentation li, .profil li{

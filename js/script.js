@@ -149,9 +149,15 @@ document.querySelectorAll(".presentation li, .profil li").forEach(li=>{
 
     });
     document.querySelectorAll(".description").forEach(desc => {
-    desc.addEventListener("click", (e) => {
-        e.stopPropagation();
-        });
+        desc.addEventListener("click", (e) => {
+            e.stopPropagation();
+            });
+        desc.addEventListener("mouseleave", (e) => {
+            e.stopPropagation();
+            });
+        desc.addEventListener("mouseenter", (e) => {
+            e.stopPropagation();
+            });
     });
     document.addEventListener("click", () => {
         isClick = false;

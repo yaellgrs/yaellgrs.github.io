@@ -286,7 +286,7 @@ p, h1, a{
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 
-    z-index: 1000;
+    z-index: 1;
 }
 
 .menu a{
@@ -512,8 +512,8 @@ box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
 .description-show-big{
     transform:translateY(0%);
     width:40%;
-    height: 50%;
-    top:25%;
+    height: 70%;
+    top:15%;
     left:30%;
 }
 
@@ -525,18 +525,19 @@ box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
     display:block;
 
     color:var(--active-text-color);
+        margin:1em;
 }
 
 .description-show-big h1{
     display:block;
-    font-size:5em;
+    font-size:4em;
     margin:0px;
 }
 
 .description-show-big a{
 
     font-size:3em;
-    margin:1em;
+
 
 }
 .description-show-big a:hover{

@@ -1,0 +1,28 @@
+{
+    "fr":{
+        "_MENUS": "",
+
+        "menu_project": "mes projets",
+        "menu_contact": "me contacter",
+
+        "INDEX_HTML": "",
+
+        "profil_age" : "19 ans, développeur de jeux vidéo et de logiciel",
+        "profil_description" : "curieux et passioné je fais tout pour réussir mes objectifs.",
+        "profil_etude" : "- 2e année de licence informatique a caen -"
+
+    },
+    "en":{
+        "_MENUS": "",
+
+        "menu_project": "projects",
+        "menu_contact": "contact",
+        
+        "INDEX_HTML": "",
+
+        "profil_age" : "19 yo, game and software developer",
+        "profil_description" : "curious and passionate, I do everything to achieve my goals.",
+        "profil_etude" : "- 2nd year of computer science degree in Caen, France -"
+    }
+
+}

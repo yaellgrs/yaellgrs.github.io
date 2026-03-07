@@ -3,37 +3,38 @@
 <head>
   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-        <link
-    rel="stylesheet"
-    href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
-  />
+
+    <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/progressBarreStyle.css">
 
     <script src="/js/script.js" defer></script>
+    <script src="/js/traduct.js" defer></script>
   <title>Mon site</title>
 
 </head>
 
 
 <body>
-
   <div class="overlay" id="overlay"></div>
 
   <div class="menu">
-    <a href="src/project.html">mes projets</a>
+    <a href="src/project.html" id="menu_project">mes projets</a>
     <a class="menu-selected" href="/index.html">profil</a>
-    <a href="src/contact.html">me contacter</a>
+    <a href="src/contact.html" id="menu_contact">me contacter</a>
   </div>
-  
+
+  <button id="btn-fr">FR</button>
+  <button id="btn-en">EN</button>
+    
   <div class="profil">
     <div class="profil-header">
       <img src="/img/profil.png">
       <div>
         <h1>Yaël Legris</h1>
-        <p>19 ans, développeur de jeux vidéo et de logiciel</p>
-        <p>curieux et passioné je fais tout pour réussir mes objectifs.</p>
-        <p>- 2e année de licence informatique a caen -</p>
+        <p id="profil_age">19 ans, développeur de jeux vidéo et de logiciel</p>
+        <p id="profil_description">curieux et passioné je fais tout pour réussir mes objectifs.</p>
+        <p id="profil_etude">- 2e année de licence informatique a caen -</p>
       </div>
     </div>
     <!--competences-->
@@ -200,7 +201,6 @@ GitHubCalendar(".calendar", "yaellgrs", {
     tooltips: true
 });
 </script>
-
 
 </body>
 </html>

@@ -510,8 +510,8 @@ box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
 .description-show-big{
     transform:translateY(0%);
     width:40%;
-    height: 90%;
-    top:1%;
+    height: 80%;
+    top: 6px;%;
     left:30%;
 }
 
@@ -532,11 +532,9 @@ box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
     margin:0px;
 }
 
-.description-show-big a{
+.description-show-big p{
 
-    font-size:3em;
-
-
+    font-size:1.7em;
 }
 .description-show-big a:hover{
     color:var(--rappel-color-hover);
@@ -732,10 +730,18 @@ font-size: clamp(0.75em, 1.25vw, 2em);
     .description-show-big {
     width: 70%;
     left: 7.5%;
-    height: 80%;
-    top: 5%;
+    height: 70%;
+    top: 10%;
   }
 
+    .description-show-big h1{
+        font-size:3em;
+        margin:0.5em;
+    }
+
+    .description-show-big p{
+        font-size:1.2em;
+    }
 
 
     .project h1{

@@ -32,14 +32,14 @@
     <h3>09/2025 - 12/2025</h3>
 
     <p>Employer-vs-Manager est un jeu créer a 4, dont 3 développeur et 1 modélisatrice. Le but étant de créer un jeu multijoueur agréable et amusant qui sera poster sur steam.</p>
-    <p>Le projets n'a pas été poursuivi pour des raisons personnels, mais aura été très formateur.</p>
+    <p>Suite a l'abandon de 2 des développeur le projet n'a pas été porsuivit, pour le moment.</p>
   </div>
 
   <div class="presentation" id="concept">
     <h2>Le concepte</h2>
 
     <p>Employee vs Manager est un jeu multijoueur ou s'affrontent le boss et les employées.</p>
-    <p>Les joueurs employées sont cachés parmis les bots controllés par ia et ont pour but de saboter le boss sans se faire repérer. Tandis que le boss a pour but de trouver les joueurs et de les virers</p>
+    <p>Les joueurs employées sont cachés parmis les bots et ont pour but de saboter le boss sans se faire repérer. Tandis que le boss a pour but de trouver les joueurs et de les virers</p>
   </div>
 
   <div class="presentation" id="participation">
@@ -70,30 +70,60 @@
       <li>NGO</li>
       <li>AI-NavMesh</li>
       <li>Git</li>
+      <li>Blender</li>
     </ul>
   </div>
-  <p class="description" id="UIToolkit"> Toutes les interfaces ont été fait avec UIToolkit et sont liés par un script.</p>
-  <p class="description" id="NGO">Le multijoueur a été fait avec network for gameObject</p>
-  <p class="description" id="AI-NavMesh">Les calcules de déplacement de bots ont été basé sur les outils proprosé avec NavMesh agent.</p>
-  <p class="description" id="Git">Le travail en équipe a pu être possible grace a git, où chaque personne travaillais sur branche.</p>
+  <div class="description" id="UIToolkit">
+      <h1>UIToolkit</h1>
+      <p>Toutes les interfaces ont été fait avec <strong>UIToolkit</strong> et sont liés par un script. Celle ci sont adaptés pour être le plus <strong>responsives</strong> possible aux différents formats mobiles.</p>
+      <p>Certains élément ont été créer <strong>dérivant des class VisualElement ou Button</strong> pour répondre au besoins spécifiques du jeu.</p>
+      </p>
+  </div>
+
+  <div class="description" id="NGO">
+      <h1>UIToolkit</h1>
+      <p>Le multijoueur a été fait avec network for gameObject</p>
+      </p>
+  </div>
+  <div class="description" id="AI-NavMesh">
+      <h1>AI-NavMesh</h1>
+      <p>Les calcules de déplacement de bots ont été basé sur les outils proprosé avec NavMesh agent.</p>
+  </div>
+  <div class="description" id="Git">
+      <h1>Git</h1>
+      <p>Le travail en équipe a pu être possible grace a git, où chaque personne travaillais sur branche.</p>
+  </div>
+
+  <div class="description" id="Blender">
+      <h1>Blender</h1>
+      <p>Tout les models 3d ont été produit avec Blender et par la modélisatrice. J'ai personnelement créer deux model, le task board ( visible dans la 5eme vidéo ) et une poubelle. </p>
+  </div>
+
 
   <div class="presentation" id="fonctionnalités">
     <h2>fonctionnalités</h2>
     <ul>
       <li>Multijoueur</li>
-      <li>Missions</li>         
-    </ul>
+      <li>pc-virtuel</li>         
+      <li>Npc-IA</li>         
     </ul>
   </div>
 
-  <p class="description" id="Multijoueur">Pour pouvoir stocker des nombres sont <strong>sans limite de taille</strong> tout en gardant de bonnes performances j'ai codé la class BigNumber qui se base sur la <strong>notation scientifique</strong>.</p>
-  <p class="description" id="Missions">Au cours de la partie différentes missions assez variés, sous forme de tache ou sabotages sont proposés</p>
+  <div class="description" id="Multijoueur">
+      <h1>Multijoueur</h1>
+      <p>Le jeu est entièrement multijoueur, avec possibilité de créer et rejoindre des lobbies pour jouer avec ses amis.</p>
+      <p>Un gros travail a été fait sur la gestion de l'autorité serveur et la réplication des objets, mouvement et interactions.</p>
+  </div>
 
-  <div class="presentation" id="téléchargement">
-    <h2>téléchargement</h2>
-    <ul>
-      <a href="https://github.com/yaellgrs/Manager-vs-employee" target="_blank">repo github</a>
-    </ul>
+  <div class="description" id="pc-virtuel">
+      <h1>pc-virtuel</h1>
+      <p>Un pc virtuel est recréer dans le jeu pour créer des missions immersives, avec un mini système de boite mail intégré.</p>
+  </div>
+
+  <div class="description" id="Npc-IA">
+      <h1>Npc-IA</h1>
+      <p>Les Npc dans le jeu, sous forme d'employée, sont entièrement indépendant, interagisse avec la map et font leurs mission.</p>
+      <p>Un effort a été porté pour leur donner un comportement un peu plus aléatoire et humain afin que les joueurs puissent se dissimuler parmis eux.</p>
   </div>
                 
 </body>

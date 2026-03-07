@@ -30,7 +30,7 @@
     <h1>OuinOui Engine</h1>
     <h3>06/2025 - 07/2025</h3>
 
-    <p>Ceci est un moteur graphique que je développe a coté, en secondaire dans mes objectfs, pour le plaisir et l'apprentissage. </p>
+    <p>Ceci est un moteur graphique que je développe a coté, en secondaire dans mes objectfs, pour le plaisir et l'apprentissage et comment fonctionne réellement les moteurs graphiques. </p>
   </div>
 
   <div class="presentation" id="images">
@@ -51,25 +51,70 @@
     <h3>c++</h3>
     <ul>
       <li>OpenGL</li>
+      <li>GLM</li>
+      <li>Imgui</li>
     </ul>
   </div>
-  <p class="description" id="OpenGL">Les calculs 3d sont fait a l'aide d'openGL.</p>
+    <div class="description" id="OpenGL">
+      <h1>OpenGL</h1>
+      <p>Les calculs 3d sont fait a l'aide d'openGL.</p>
+  </div>
+    <div class="description" id="GLM">
+      <h1>GLM</h1>
+      <p>La création et les calculs de matrice ainsi que de vecteur ou de calculs mathématiques complexe ont été réalise avec glm.</p>
+  </div>
+    <div class="description" id="Imgui">
+      <h1>Imgui</h1>
+      <p>Toute les interfaces ont été réalise avec la libraire openSource Imgui.</p>
+  </div>
 
   <div class="presentation" id="fonctionnalités">
     <h2>fonctionnalités</h2>
     <ul>
       <li>Editeur de texte</li>      
+      <li>Shadow Mapping</li>  
+      <li>Calcul de lumière</li>  
+      <li>Anticrénelage</li>      
+      <li>lecture de fichier fbx</li>     
     </ul>
     </ul>
   </div>
 
-  <p class="description" id="Editeur de texte">Un Editeur de text est intégré au moteur graphique.</p>
+
+  <div class="description" id="Editeur de texte">
+      <h1>Editeur de texte</h1>
+      <p>Un Editeur de text est intégré au moteur graphique. On peut modifier et sauvegarder les fichiers, en ouvrir plusieurs de manière simultanés.</p>
+  </div>
+
+    <div class="description" id="Shadow Mapping">
+      <h1>Shadow Mapping</h1>
+      <p>Afin d'un rendu plus réaliste le moteur utilise le shadow mapping, c'est a dire qu'il y a un premier rendu pour enregistrer ou rendre l'ombre pour le prendre en compte au rendu final.</p>
+  </div>
+
+    <div class="description" id="Calcul de lumière">
+      <h1>Calcul de lumière</h1>
+      <p>Le calcul de lumière se base sur le modèle de phong combiné avec des système plus basique de lumière ambiant et d'attenuation selon la distance</p>
+  </div>
+
+    <div class="description" id="Anticrénelage">
+      <h1>Anticrénelage</h1>
+      <p>Un système d'anticrénelage a été intégré afin de rendre plus lisse l'ombrage. Le calcul d'anticrénelage fait la moyenne de l'ombre des fragments dans un carré de 16*16 autour de celui calculé.</p>
+  </div>
+
+    <div class="description" id="lecture de fichier fbx">
+      <h1>lecture de fichier fbx</h1>
+      <p>Le moteur sait lire et rendre un fichier fbx.</p>
+  </div>
+
+
 
   <div class="presentation" id="téléchargement">
     <h2>téléchargement</h2>
     <ul>
     </ul>
   </div>
+
+
                 
 </body>
 </html>

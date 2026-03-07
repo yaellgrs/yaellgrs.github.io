@@ -51,12 +51,12 @@ body{
 
 
 h1{
-    font-size: 7vw;
+    font-size: clamp(2rem, 5vw, 5rem);
     margin-top:0;
 }
 
 p{
-    font-size: 2vw;
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
 }
 
 strong{
@@ -681,15 +681,7 @@ font-size: clamp(0.75em, 1.25vw, 2em);
 .next{right:1%;}
 
 
-@media (max-width: 640px){
-    .project {
-        width: 80vw;
-        transform: translateX(10vw);
-        background-color: red;
-        padding: 15px 0px 15px 0px;
-        
-        margin:0vw 0vw 6vw 0vw;
-    }
+@media (max-width: 768px){
 
     body{
         padding-top:25vw;
@@ -704,6 +696,47 @@ font-size: clamp(0.75em, 1.25vw, 2em);
     p{
         font-size: 12.5px;
     }
+
+
+    .project {
+        width: 80vw;
+        transform: translateX(10vw);
+        padding: 15px 0px 15px 0px;
+        
+        margin:0vw 0vw 6vw 0vw;
+    }
+
+    .profil, .presentation, .project {
+        width: 80vw;
+    }
+
+    .profil-header {
+        flex-direction: column;
+         margin-right: 0;
+    }
+    .profil img {
+        width: 30vw;
+        height: 40vw;
+        margin: auto;
+        margin-top:1em;
+    }
+
+    .profil-header h1, .profil-header p { 
+        font-size: 6vw;
+        margin:25px;
+    }
+    
+  .profil h2 { font-size: 5vw; }
+  .profil-text p { font-size: 3.5vw; }
+
+    .description-show-big {
+    width: 70%;
+    left: 7.5%;
+    height: 80%;
+    top: 5%;
+  }
+
+
 
     .project h1{
         margin:20px 20px 20px 20px;
@@ -722,7 +755,7 @@ font-size: clamp(0.75em, 1.25vw, 2em);
     .menu{
         position: fixed;
         top: 20px;
-        left: 55%;
+        left: 50%;
         transform: translateX(-50%);
 
         display:grid;
@@ -883,5 +916,57 @@ box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
     width: 30vw;
     margin-left:5vw;
 }
+
+
+.presentation li, .profil li{
+    font-size: 3vw;
+
+    padding: 2vw 3vw;
+
+}
+
+.presentation ul, .profil ul {
+    width: 90%;
+}
+
+.social {
+    margin-top:1em;
+    margin-bottom:1em;
+            display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+
+}
+    .link {
+        margin: 1em auto;
+        justify-content: center;
+    }
+
+    .profil .link a {
+        font-size: 4vw;
+        width: auto;
+        padding: 0.6em 1.5em;
+    }
+
+    
+    .profil .link a img {
+        width: 4vw;
+        height: 4vw;
+        margin-right: 1em;
+    }
+
+
+    .calendar{
+        margin:0px;
+        padding:0px;
+        margin: -5em 0; 
+        transform:  scale(0.35);
+        overflow: visible; /* ou supprime overflow:hidden */
+    }
+
+    .profil .scrollBar-image img {
+        height: 35px;
+    }
 
 }

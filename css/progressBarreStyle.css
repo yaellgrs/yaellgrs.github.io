@@ -5,7 +5,7 @@
     border-radius: var(--main-border-radius);
     overflow: hidden;;
     transform: translateY(50%);
-    transform: translatex(10%);
+    margin: auto; /* centrage simple sans transform */
 
 }
 
@@ -27,3 +27,14 @@
 .javascript{ width: 40%;}
 .html{ width: 30%;}
 .python{ width: 30%;}
+
+
+@media (max-width: 768px){
+    .progressBarreContainer{
+        width:50%;
+    }
+    .skill{
+        height:5px; 
+    }
+
+}

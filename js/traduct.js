@@ -14,7 +14,31 @@ async function loadLang(lang){
 }
 
 const userLang = navigator.language.startsWith('en') ? 'en' : 'fr';
+const btnEN = document.getElementById("btn-en");
+const btnFR = document.getElementById("btn-fr")
 loadLang(userLang);
+setLangueButton();
 
-document.getElementById("btn-en").addEventListener('click', ()=> loadLang("en"));
-document.getElementById("btn-fr").addEventListener('click', ()=> loadLang("fr"));
+
+
+btnEN.addEventListener('click', ()=> {
+
+    loadLang("en");
+    setLangueButton("en");
+});
+btnFR.addEventListener('click', ()=> {
+
+    loadLang("fr");
+    setLangueButton("fr");
+});
+
+function setLangueButton(lang){
+    if(lang == 'fr'){
+        btnEN.classList.remove("langue-active");
+        btnFR.classList.add("langue-active");
+    }
+    else{
+        btnEN.classList.add("langue-active");
+        btnFR.classList.remove("langue-active");
+    }
+}

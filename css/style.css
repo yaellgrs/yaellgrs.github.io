@@ -77,6 +77,35 @@ box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
 -moz-box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
 }
 
+.langues{
+    position:fixed;
+    top:0;
+    right:0;
+    margin:1em 2em;
+    padding:1em;
+    display:flex;
+    flex-direction: row;
+
+    border-radius: var(--main-border-radius);
+    background-color: var(--second-color);
+}
+
+.langues p{
+    -webkit-background-clip: revert;
+    margin:0px;
+    padding:0.5em 1em;
+    color:var(--main-text-color);
+    border-radius: var(--main-border-radius);
+    transition:all 0.3s;
+}
+
+.langues p:hover:not(.langue-active){
+    background-color: var(--rappel-color-hover);
+}
+.langues .langue-active{
+    background-color: var(--rappel-color);
+}
+
 
 
 .overlay{
@@ -553,6 +582,8 @@ box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
 
 }
 
+
+
 .table{
     color: transparent;
     background:linear-gradient(270deg, #807f7f, #2b2929);
@@ -828,6 +859,9 @@ font-size: clamp(0.75em, 1.25vw, 2em);
 .table-hide ~ .presentation{
     transform: translateX(18vw) scaleX(1.1);
 }
+
+
+
 
     
 

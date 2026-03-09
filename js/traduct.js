@@ -7,7 +7,9 @@ async function loadLang(lang){
 
     for(const [id, text] of Object.entries(translations[lang])){
         const el = document.getElementById(id);
-        if(el) el.innerHTML = text;
+        if(el) {
+            el.innerHTML = text;
+        }
     }
 }
 

@@ -134,7 +134,7 @@ const overlay = document.getElementById("overlay");
 document.querySelectorAll(".presentation li, .profil li").forEach(li=>{
     li.addEventListener("mouseenter", () => {
         console.log("enter");
-        let elem = document.getElementById(li.textContent);
+        let elem = document.getElementById(li.dataset.skill);
         if(current_elem && elem != current_elem) {
             current_elem.classList.remove("description-show");
             isClick = false;
@@ -144,7 +144,7 @@ document.querySelectorAll(".presentation li, .profil li").forEach(li=>{
             elem.classList.add("description-show");}
     });
     li.addEventListener("mouseleave", () => {
-        let elem = document.getElementById(li.textContent);
+        let elem = document.getElementById(li.dataset.skill);
         if(elem && !isClick) elem.classList.remove("description-show");
 
     });
@@ -169,7 +169,7 @@ document.querySelectorAll(".presentation li, .profil li").forEach(li=>{
     });
     li.addEventListener("click", (e) => {
         e.stopPropagation();
-        current_elem = document.getElementById(li.textContent);
+        current_elem = document.getElementById(li.dataset.skill);
         isClick = true;
         if(current_elem) {
 

@@ -17,7 +17,7 @@ const userLang = navigator.language.startsWith('en') ? 'en' : 'fr';
 const btnEN = document.getElementById("btn-en");
 const btnFR = document.getElementById("btn-fr")
 loadLang(userLang);
-setLangueButton();
+setLangueButton(currentLang);
 
 
 

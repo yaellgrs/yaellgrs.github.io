@@ -17,15 +17,15 @@
         "profil_description_git_1" : "Je sais versionner mes projets avec <strong>git</strong>, de gérer les <strong>conflits lors de fusions</strong> dans des travails en équipe, de <strong>commit régulièrement</strong> mes avancés et de fusionner mon travail avec celui des autres membres du projet.",
         "profil_description_git_2" : "Au cours de mes projets j'ai été amené a utiliser git avec jusqu'à <strong>3 autres dev et 1 graphiste</strong> sur le même projet.",
 
-        "profil_skill_gamedev" : "développement de jeu vidéo",
+        "profil_skill_gamedev" : "Développement de jeu vidéo",
         "profil_description_gamedev_1" : "Je suis spécialisé dans la création de jeux vidéo. Qu'importe l'outil je peux concevoir un produit finis de la création à la production.</p>",
         "profil_description_gamedev_2" : "Lors de mon parcour j'ai eu l'occasion de créer des jeux avec nottament unity, mais également UnrealEngine, sfml et python, que ce soit seul ou en équipe.",
 
-        "profil_skill_software" : "développement application",
+        "profil_skill_software" : "Développement application",
         "profil_description_software_1" :"Lors de ma licence j'ai appris a créer des applications web en javascript et php, et des applications desktop en java.",
         "profil_description_software_2" :"J'ai également appris de mon coté les bases pour créer un moteur graphique en c++.",
 
-        "profil_skill_teamWork" : "travail en équipe",
+        "profil_skill_teamWork" : "Travail en équipe",
         "profil_description_teamwork_1" : "Je sais travailler en équipe, écouter les besoins de chacun et planifier/répartir les tâches en équipe pour aboutir le projet.",
         "profil_description_teamwork_2" : "Lors de ma licence j'ai été à de nombreuses reprises amené de travailler à plusieurs sur le même projet que ce soit pour un but perso ou pour les cours.",
 

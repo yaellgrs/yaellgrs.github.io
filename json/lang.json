@@ -42,6 +42,8 @@
         "profil_description_fastLean_2" : "De cette manière je code tout les jours, littéralement, qu'importe du temps qui m'y est accordé, et je suis sans cesse dans la recherche d'apprendre, d'apprendre a mieux travailler, plus rapidement, plus efficacement, plus proprement.",
         "profil_description_fastLean_3" : "Si je n'ai pas les compétences requises pour un objectif, je ferais tout pour l'acquérir le plus vite possible.",
 
+        "profil_bestProjects" : "Meilleurs Projets",
+
         "project_gamedev" : "Jeux Vidéos",
         "project_software" : "Logiciels",
         "project_mainGame" : "Jeux Principaux"
@@ -88,6 +90,8 @@
         "profil_description_fastLean_2": "Because of this, I code every day, literally, regardless of the time I have available. I am constantly trying to learn how to work better, faster, more efficiently and with cleaner code.",
         "profil_description_fastLean_3": "If I don't yet have the skills required for a goal, I will do everything possible to acquire them as quickly as possible.",
     
+        "profil_bestProjects" : "Bests Projects",
+
         "project_gamedev" : "GameDev",
         "project_software" : "Software",
         "project_mainGame" : "Main Games"

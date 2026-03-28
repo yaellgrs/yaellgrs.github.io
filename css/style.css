@@ -77,6 +77,23 @@ box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
 -moz-box-shadow: 1px 1px 25px -2px rgba(255,255,255,1);
 }
 
+.ProjectTitle{
+    position:absolute;
+    background-color: var(--second-color);
+    border-radius: var(--main-border-radius);
+    padding:0em 1em;
+    transform:translateY(-110%);
+
+    opacity:0;
+    transition: 0.25s ease;
+}
+
+
+.projectHighLight:hover .ProjectTitle {
+
+    opacity:1;
+}
+
 .langues{
     position:fixed;
     top:0;
